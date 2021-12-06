@@ -17,7 +17,7 @@ vector<int> getDepthsFromFile()
   while (getline (sonarDepths, depthString)){
       stringToInt.clear();
       stringToInt.str(depthString);
-      if (stringToInt != "")
+      if (stringToInt.rdbuf()->in_avail() != 0)
       {
         stringToInt >> depthInt;
       }  
